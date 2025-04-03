@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pontos Gastronômicos | Rota Gastronômica Dourados</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styleRestaurantes.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="mainHeader">
+      <div class="container header-content">
+        <a href="index.html" class="logo">Rota Gastronômica</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li>
+              <a href="pontosGastronomicos.html" class="active"
+                >Pontos Gastronômicos</a
+              >
+            </li>
+            <li><a href="sobreDourados.html">Sobre Dourados</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-internal">
+      <div class="container">
+        <h1>Pontos Gastronômicos</h1>
+        <p>Descubra os melhores restaurantes italianos de Dourados</p>
+      </div>
+    </section>
+    <!-- Filtro Estilizado -->
+    <section class="gastronomic-filter">
+      <div class="container">
+        <div class="filter-header">
+          <h2>Descubra os melhores restaurantes italianos de Dourados</h2>
+        </div>
+
+        <div class="filter-controls">
+          <!-- Filtro por Culinária -->
+          <div class="filter-group cuisine-filter">
+            <div class="filter-label">
+              <i class="fas fa-utensils"></i>
+              <span>Culinária</span>
+            </div>
+            <select id="cuisine" class="styled-select">
+              <option value="all" selected>Todas as Culinárias</option>
+              <option value="Italiana">Italiana</option>
+              <option value="Massas">Massas</option>
+              <option value="Pizzas">Pizzas</option>
+              <option value="Churrasco">Churrasco</option>
+              <option value="Sushi">Japonesa/Sushi</option>
+              <option value="Cafés">Cafés</option>
+              <option value="Sorvetes">Sorvetes</option>
+              <option value="Mexicana">Mexicana</option>
+            </select>
+          </div>
+
+          <!-- Ordenação -->
+          <div class="filter-group sort-filter">
+            <div class="filter-label">
+              <i class="fas fa-sort"></i>
+              <span>Ordenar por</span>
+            </div>
+            <select id="sort" class="styled-select">
+              <option value="high-rating">Melhor Avaliado</option>
+              <option value="a-z">A-Z</option>
+              <option value="z-a">Z-A</option>
+              <option value="low-rating">Menor Avaliação</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lista de Pontos Gastronômicos -->
+    <section class="restaurants">
+      <div class="container">
+        <h2>Nossos Parceiros</h2>
+        <div class="restaurant-grid" id="restaurant-container">
+          <!-- Tutto Cuccina -->
+          <div
+            class="restaurant-card"
+            data-name="Tutto Cuccina"
+            data-rating="4.8"
+            data-cuisine="Italiana"
+          >
+            <img src="img/TuttoCuccina.png" alt="Tutto Cuccina" />
+            <div class="restaurant-info">
+              <h3>Tutto Cuccina</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.8</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Italiana autêntica
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bella Trattoria -->
+          <div
+            class="restaurant-card"
+            data-name="Bella Trattoria"
+            data-rating="4.1"
+            data-cuisine="Massas"
+          >
+            <img src="img/BellaTrattoria.png" alt="Bella Trattoria" />
+            <div class="restaurant-info">
+              <h3>Bella Trattoria</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.1</span>
+              </div>
+              <p><i class="fas fa-utensils"></i> Massas artesanais</p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Ristorante Benedetto -->
+          <div
+            class="restaurant-card"
+            data-name="Ristorante Benedetto"
+            data-rating="4.5"
+            data-cuisine="Italiana"
+          >
+            <img src="img/RistoranteBenedetto.png" alt="Ristorante Benedetto" />
+            <div class="restaurant-info">
+              <h3>Ristorante Benedetto</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.5</span>
+              </div>
+              <p><i class="fas fa-utensils"></i> Culinária: Italiana premium</p>
+              <a
+                href="https://maps.app.goo.gl/uF1zJBvNmth91jpS6"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Clube do Téres -->
+          <div
+            class="restaurant-card"
+            data-name="Clube do Téres"
+            data-rating="4.5"
+            data-cuisine="Variada"
+          >
+            <img src="img/ClubedoTeres.png" alt="Clube do Téres" />
+            <div class="restaurant-info">
+              <h3>Clube do Téres</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.5</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Variada (bar e
+                restaurante)
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- POINT da CHIPA -->
+          <div
+            class="restaurant-card"
+            data-name="POINT da CHIPA"
+            data-rating="4.8"
+            data-cuisine="Lanches"
+          >
+            <img src="img/PointDaChipa.png" alt="POINT da CHIPA" />
+            <div class="restaurant-info">
+              <h3>POINT da CHIPA</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.8</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Lanches e Chipas
+                tradicionais
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- HIRADE BROWNERIA -->
+          <div
+            class="restaurant-card"
+            data-name="HIRADE BROWNERIA"
+            data-rating="5.0"
+            data-cuisine="Confeitaria"
+          >
+            <img src="img/HiradeBrowneria.png" alt="HIRADE BROWNERIA" />
+            <div class="restaurant-info">
+              <h3>HIRADE BROWNERIA</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="far fa-star"></i>
+                <span>5.0</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Confeitaria e
+                Brownies artesanais
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pão e Companhia -->
+          <div
+            class="restaurant-card"
+            data-name="Pão e Companhia"
+            data-rating="4.5"
+            data-cuisine="Padaria"
+          >
+            <img src="img/PaoECompanhia.png" alt="Pão e Companhia" />
+            <div class="restaurant-info">
+              <h3>Pão e Companhia</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.5</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Padaria artesanal e
+                café da manhã
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- D'italia Pizzaria -->
+          <div
+            class="restaurant-card"
+            data-name="D'italia Pizzaria"
+            data-rating="4.6"
+            data-cuisine="Pizzas"
+          >
+            <img src="img/DItaliaPizzaria.png" alt="D'italia Pizzaria" />
+            <div class="restaurant-info">
+              <h3>D'italia Pizzaria</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.6</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Pizzas italianas e
+                massas
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Padaria e Cafeteria Seu Café -->
+          <div
+            class="restaurant-card"
+            data-name="Seu Café"
+            data-rating="4.5"
+            data-cuisine="Cafés"
+          >
+            <img src="img/SeuCafe.png" alt="Padaria e Cafeteria Seu Café" />
+            <div class="restaurant-info">
+              <h3>Seu Café</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.5</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Cafés especiais e
+                lanches
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hotel e Churrascaria Guaporé -->
+          <div
+            class="restaurant-card"
+            data-name="Churrascaria Guaporé"
+            data-rating="4.5"
+            data-cuisine="Churrasco"
+          >
+            <img src="img/Guapore.png" alt="Churrascaria Guaporé" />
+            <div class="restaurant-info">
+              <h3>Churrascaria Guaporé</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.5</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Churrasco gaúcho e
+                buffet
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- OX Na Brasa -->
+          <div
+            class="restaurant-card"
+            data-name="OX Na Brasa"
+            data-rating="4.5"
+            data-cuisine="Carnes"
+          >
+            <img src="img/OXNaBrasa.png" alt="OX Na Brasa" />
+            <div class="restaurant-info">
+              <h3>OX Na Brasa</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.5</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Carnes nobres e
+                grelhados
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Eden Beer -->
+          <div
+            class="restaurant-card"
+            data-name="Eden Beer"
+            data-rating="4.7"
+            data-cuisine="Cervejas"
+          >
+            <img src="img/EdenBeer.png" alt="Eden Beer" />
+            <div class="restaurant-info">
+              <h3>Eden Beer</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.7</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Cervejas artesanais e
+                petiscos
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dio Santo Pizzaria -->
+          <div
+            class="restaurant-card"
+            data-name="Dio Santo Pizzaria"
+            data-rating="4.7"
+            data-cuisine="Pizzas"
+          >
+            <img src="img/DioSanto.png" alt="Dio Santo Pizzaria" />
+            <div class="restaurant-info">
+              <h3>Dio Santo Pizzaria</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.7</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Pizzas artesanais
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Utida Sushi -->
+          <div
+            class="restaurant-card"
+            data-name="Utida Sushi"
+            data-rating="4.7"
+            data-cuisine="Sushi"
+          >
+            <img src="img/UtidaSushi.png" alt="Utida Sushi" />
+            <div class="restaurant-info">
+              <h3>Utida Sushi</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.7</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Sushi (rodízio, à la
+                carte, omakase)
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Milky Moo -->
+          <div
+            class="restaurant-card"
+            data-name="Milky Moo"
+            data-rating="4.6"
+            data-cuisine="Sorvetes"
+          >
+            <img src="img/MilkyMoo.png" alt="Milky Moo" />
+            <div class="restaurant-info">
+              <h3>Milky Moo</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.6</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Sorvetes e milk
+                shakes
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Barão Botequim -->
+          <div
+            class="restaurant-card"
+            data-name="Barão Botequim"
+            data-rating="4.5"
+            data-cuisine="Petiscos"
+          >
+            <img src="img/BaraoBotequim.png" alt="Barão Botequim" />
+            <div class="restaurant-info">
+              <h3>Barão Botequim</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.5</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Petiscos e drinks
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- The Best Açaí -->
+          <div
+            class="restaurant-card"
+            data-name="The Best Açaí"
+            data-rating="4.8"
+            data-cuisine="Açaí"
+          >
+            <img src="img/TheBestAcai.png" alt="The Best Açaí" />
+            <div class="restaurant-info">
+              <h3>The Best Açaí</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.8</span>
+              </div>
+              <p><i class="fas fa-utensils"></i> Culinária: Açaí e bowls</p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Casa Dourados -->
+          <div
+            class="restaurant-card"
+            data-name="Casa Dourados"
+            data-rating="4.6"
+            data-cuisine="Caseira"
+          >
+            <img src="img/CasaDourados.png" alt="Casa Dourados" />
+            <div class="restaurant-info">
+              <h3>Casa Dourados</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.6</span>
+              </div>
+              <p><i class="fas fa-utensils"></i> Culinária: Comida caseira</p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Nacho Man Dourados -->
+          <div
+            class="restaurant-card"
+            data-name="Nacho Man Dourados"
+            data-rating="4.8"
+            data-cuisine="Mexicana"
+          >
+            <img src="img/NachoMan.png" alt="Nacho Man Dourados" />
+            <div class="restaurant-info">
+              <h3>Nacho Man Dourados</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.8</span>
+              </div>
+              <p><i class="fas fa-utensils"></i> Culinária: Comida mexicana</p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Gatolo Bakery -->
+          <div
+            class="restaurant-card"
+            data-name="Gatolo Bakery"
+            data-rating="4.8"
+            data-cuisine="Confeitaria"
+          >
+            <img src="img/GatoloBakery.png" alt="Gatolo Bakery" />
+            <div class="restaurant-info">
+              <h3>Gatolo Bakery</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.8</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Confeitaria artesanal
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Gelattos do Nôno Sorvetes -->
+          <div
+            class="restaurant-card"
+            data-name="Gelattos do Nôno"
+            data-rating="4.7"
+            data-cuisine="Sorvetes"
+          >
+            <img src="img/Gelattos.png" alt="Gelattos do Nôno Sorvetes" />
+            <div class="restaurant-info">
+              <h3>Gelattos do Nôno</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.7</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Sorvetes artesanais
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Uelma Arantes Cafeteria -->
+          <div
+            class="restaurant-card"
+            data-name="Uelma Arantes Cafeteria"
+            data-rating="4.6"
+            data-cuisine="Cafés"
+          >
+            <img src="img/UelmaArantes.png" alt="Uelma Arantes Cafeteria" />
+            <div class="restaurant-info">
+              <h3>Uelma Arantes Cafeteria</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.6</span>
+              </div>
+              <p><i class="fas fa-utensils"></i> Culinária: Cafés especiais</p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Nonna Noemia Pizzeria -->
+          <div
+            class="restaurant-card"
+            data-name="Nonna Noemia Pizzeria"
+            data-rating="4.7"
+            data-cuisine="Pizzas"
+          >
+            <img src="img/NonnaNoemia.png" alt="Nonna Noemia Pizzeria" />
+            <div class="restaurant-info">
+              <h3>Nonna Noemia Pizzeria</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+                <span>4.7</span>
+              </div>
+              <p>
+                <i class="fas fa-utensils"></i> Culinária: Pizzas tradicionais
+              </p>
+              <a
+                href="https://maps.app.goo.gl/bkZ68Fx8hxrrhdNy5"
+                class="btn"
+                target="_blank"
+              >
+                Ver no Mapa <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Sobre Nós</h3>
+            <ul>
+              <li><a>Quem Somos</a></li>
+              <li><a>Parceiros</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Ajuda</h3>
+            <ul>
+              <li><a>Perguntas Frequentes</a></li>
+              <li><a>Termos de Uso</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Redes Sociais</h3>
+            <div class="social-icons">
+              <a><i class="fab fa-instagram"></i></a>
+              <a><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; 2023 Rota Gastronômica Dourados. Todos os direitos
+            reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // O mesmo JavaScript da implementação anterior pode ser mantido
+      document.addEventListener("DOMContentLoaded", function () {
+        const sortSelect = document.getElementById("sort");
+        const cuisineSelect = document.getElementById("cuisine");
+        const restaurantContainer = document.getElementById(
+          "restaurant-container"
+        );
+        const restaurantCards = Array.from(
+          restaurantContainer.getElementsByClassName("restaurant-card")
+        );
+
+        function filterAndSortRestaurants() {
+          const sortValue = sortSelect.value;
+          const cuisineValue = cuisineSelect.value;
+
+          let filteredCards = restaurantCards;
+          if (cuisineValue !== "all") {
+            filteredCards = restaurantCards.filter((card) => {
+              return card.dataset.cuisine.includes(cuisineValue);
+            });
+          }
+
+          filteredCards.sort((a, b) => {
+            const nameA = a.dataset.name.toLowerCase();
+            const nameB = b.dataset.name.toLowerCase();
+            const ratingA = parseFloat(a.dataset.rating);
+            const ratingB = parseFloat(b.dataset.rating);
+
+            switch (sortValue) {
+              case "a-z":
+                return nameA.localeCompare(nameB);
+              case "z-a":
+                return nameB.localeCompare(nameA);
+              case "high-rating":
+                return ratingB - ratingA;
+              case "low-rating":
+                return ratingA - ratingB;
+              default:
+                return 0;
+            }
+          });
+
+          while (restaurantContainer.firstChild) {
+            restaurantContainer.removeChild(restaurantContainer.firstChild);
+          }
+
+          filteredCards.forEach((card) => {
+            restaurantContainer.appendChild(card);
+          });
+        }
+
+        sortSelect.addEventListener("change", filterAndSortRestaurants);
+        cuisineSelect.addEventListener("change", filterAndSortRestaurants);
+        filterAndSortRestaurants();
+      });
+    </script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
